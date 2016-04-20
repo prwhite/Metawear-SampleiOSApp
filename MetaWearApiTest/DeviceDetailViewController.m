@@ -322,6 +322,10 @@
 
 - (IBAction)startiBeaconPressed:(id)sender
 {
+    self.device.iBeacon.minor = 10;
+    self.device.iBeacon.transmitPower = MBLiBeaconTransmitPowerMinus16dBm;
+    self.device.iBeacon.calibratedReceiverPower = -72;
+  
     [self.device.iBeacon setBeaconOn:YES];
 }
 
